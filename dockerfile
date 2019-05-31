@@ -1,15 +1,14 @@
-#change this to your own repo, should you have uploaded your image!
-FROM  quasarframework/client-dev:latest
+FROM  node:alpine
 
-MAINTAINER Your Name <your.email@your-sites-address.com>
+RUN npm install -g vue-cli && \
+    npm install -g quasar-cli && \
+    npm install -g @vue/cli && \
+    npm install -g @vue/cli-init 
 
-WORKDIR /opt/app
+RUN mkdir /home/node/app
+USER root
 
-COPY package.json /opt/app/
-RUN npm install
-
-COPY . /opt/app
-
-EXPOSE 8080
+# VOLUME [ "/home/node/app" ]
+WORKDIR /home/node/app
 
 CMD /bin/sh

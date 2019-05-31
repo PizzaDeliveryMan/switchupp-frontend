@@ -35,7 +35,8 @@ module.exports = {
   },
   module: {
     rules: [
-      { // eslint
+      /*
+	  { // eslint
         enforce: 'pre',
         test: /\.(vue|js)$/,
         loader: 'eslint-loader',
@@ -51,6 +52,7 @@ module.exports = {
         include: projectRoot,
         exclude: /node_modules/
       },
+	  */
       {
         test: /\.vue$/,
         loader: 'vue-loader',

@@ -2,6 +2,7 @@ version: '3'
 services:
   frontend:
     build: .
+    #image:  katharostech/quasar-cli:latest
     ports: 
       - "8080:8080"
     volumes: 
